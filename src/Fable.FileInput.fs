@@ -1,4 +1,4 @@
-module Fable.Import.FileInput
+module Fable.FileInput
 open Fable.Core.DynamicExtensions
 open Fable.Import
 open Fable.Core
@@ -11,7 +11,7 @@ type FileInfo<'t> =
 let createPromise (executor: ('t -> unit) -> (exn -> unit) -> unit): JS.Promise<'t> = jsNative
 
 [<Emit("$1.then($0)")>]
-let consumePromise (callback: 't->unit) (promise: JS.Promise<'t>): unit = jsNative
+let consumePromise (callback: 't->unit) (_promise: JS.Promise<'t>): unit = jsNative
 let private readInternal<'t> (readMethod: string) (blob: Browser.Blob) = 
     createPromise(fun resolve reject -> 
         try

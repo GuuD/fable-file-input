@@ -1,10 +1,10 @@
 # Typed File Input Component
 
-## For Fable And Fable.React
+## For Fable and Fable.React
 
-Use `singleFileInput` from `Fable.Import.FileInput.React` instead of regular `input` from `Fable.Import.React` if you want to handle inputs of single files, without fighting with auto-bindings.
+Use `singleFileInput` from `Fable.FileInput.React` instead of regular `input` from `Fable.Import.React` if you want to handle inputs of single files without fighting with auto-bindings.
 
-## Event Handlers
+### Event Handlers
 
 - `OnFileBytesReceived of (FileInfo<JS.ArrayBuffer> -> unit)`
 - `OnDataUrlReceived of (FileInfo<string> -> unit)`
@@ -12,7 +12,7 @@ Use `singleFileInput` from `Fable.Import.FileInput.React` instead of regular `in
 
 Where `FileInfo` is:
 
-```f#
+```fsharp
 type FileInfo<'t> = { Name: string; MIME: string; Data: 't }
 ```
 
