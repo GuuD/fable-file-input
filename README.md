@@ -31,6 +31,18 @@ type FileInfo<'t> = { Name: string; MIME: string; Data: 't }
 
 ------
 
-## Multiple Files
+## Example
+
+```fsharp
+open Fable.FileInput.React
+open Fable.Helpers.React
+open Props
+let view model dispatch =
+    div [] [
+        singleFileInput [ClassName "button"; OnFileBytesReceived(YourMessage>>dispatch)]
+    ]
+```
+
+### Multiple Files
 
 > Will add soon <sup>tm</sup>
