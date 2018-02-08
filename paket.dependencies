@@ -1,7 +1,13 @@
 source https://nuget.org/api/v2
 storage:none
+content: none
 
+nuget FSharp.Core redirects:force
 clitool dotnet-fable
 nuget Fable.Core
 nuget Fable.Import.Browser
 nuget Fable.React
+
+group Build
+    source https://www.nuget.org/api/v2
+    nuget FAKE
